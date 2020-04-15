@@ -1,0 +1,16 @@
+{
+  "id" : "2f2480c3-f533-4d18-85bb-8deaf8ebe6e3",
+  "request" : {
+    "url" : "airports",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"code\":\"GRU\",\"location\":{\"country\":\"Brazil\",\"state\":\"SP\",\"city\":\"Guarulhos\"}}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "2f2480c3-f533-4d18-85bb-8deaf8ebe6e3"
+}
