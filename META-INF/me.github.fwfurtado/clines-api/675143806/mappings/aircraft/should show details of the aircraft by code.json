@@ -1,0 +1,16 @@
+{
+  "id" : "86205f00-0a80-499d-a90a-3d88d7ab50de",
+  "request" : {
+    "url" : "/aircraft/BX123AC",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"code\":\"BX123AC\",\"model\":\"Boeing 737\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "86205f00-0a80-499d-a90a-3d88d7ab50de"
+}
