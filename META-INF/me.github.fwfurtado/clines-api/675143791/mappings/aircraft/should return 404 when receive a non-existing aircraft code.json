@@ -1,0 +1,12 @@
+{
+  "id" : "fbbcca79-b239-42a5-9214-e4c9e874634b",
+  "request" : {
+    "url" : "/aircraft/AX123AC",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "fbbcca79-b239-42a5-9214-e4c9e874634b"
+}
