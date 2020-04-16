@@ -1,0 +1,29 @@
+{
+  "id" : "35a2ac41-2426-47af-aee9-1bb85ccd16c8",
+  "request" : {
+    "url" : "flights",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['time'] == '2020-04-17T02:18:56.965807')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['price'] == 872.6222596458258)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['aircraftId'] == 'BC123AX')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['departureId'] == 'FRX')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['arrivalId'] == 'XRF')]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "{\"errors\":[{\"message\":\"Invalid Aircraft\"},{\"message\":\"Invalid Departure\"},{\"message\":\"Invalid Arrival\"}]}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "35a2ac41-2426-47af-aee9-1bb85ccd16c8"
+}

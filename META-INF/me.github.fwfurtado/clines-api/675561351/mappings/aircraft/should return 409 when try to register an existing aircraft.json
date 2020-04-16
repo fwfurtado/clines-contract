@@ -1,0 +1,23 @@
+{
+  "id" : "dfa013d3-c374-4f11-a501-d6e7f7e528e3",
+  "request" : {
+    "url" : "aircraft",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['code'] == 'BX123AC')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['modelId'] == 1)]"
+    } ]
+  },
+  "response" : {
+    "status" : 409,
+    "body" : "{\"errors\":[{\"message\":\"Aircraft already exists\"}]}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "dfa013d3-c374-4f11-a501-d6e7f7e528e3"
+}

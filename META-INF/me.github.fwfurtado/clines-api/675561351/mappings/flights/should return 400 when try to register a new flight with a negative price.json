@@ -1,0 +1,29 @@
+{
+  "id" : "16b6d9c2-430a-40db-8709-5ba14703504f",
+  "request" : {
+    "url" : "flights",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['time'] == '2020-04-17T02:18:56.965807')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['price'] == -833.121229146302)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['aircraftId'] == 'AC123AX')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['departureId'] == 'CGH')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['arrivalId'] == 'GRU')]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "{\"errors\":[{\"message\":\"must be greater than 0\",\"field\":\"price\"}]}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "16b6d9c2-430a-40db-8709-5ba14703504f"
+}
