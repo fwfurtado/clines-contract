@@ -1,0 +1,29 @@
+{
+  "id" : "efab2880-55b6-4c2c-b9c9-4588611fe92a",
+  "request" : {
+    "url" : "flights",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['time'] == null)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['price'] == null)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['aircraftId'] == null)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['departureId'] == null)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['arrivalId'] == null)]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "{\"errors\":[{\"field\":\"time\",\"message\":\"must not be null\"},{\"field\":\"price\",\"message\":\"must not be null\"},{\"field\":\"aircraftId\",\"message\":\"must not be blank\"},{\"field\":\"departureId\",\"message\":\"must not be blank\"},{\"field\":\"arrivalId\",\"message\":\"must not be blank\"}]}",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "efab2880-55b6-4c2c-b9c9-4588611fe92a"
+}

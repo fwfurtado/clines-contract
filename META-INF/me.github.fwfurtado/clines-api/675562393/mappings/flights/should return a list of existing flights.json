@@ -1,0 +1,16 @@
+{
+  "id" : "1586170d-188d-4ba4-b16a-06750ce1ba08",
+  "request" : {
+    "url" : "flights",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"id\":1,\"time\":\"3416-03-07T12:30:16?98\",\"price\":65.05362843466546,\"aircraft\":\"AC123AX\",\"departure\":\"GRU\",\"arrival\":\"CGH\"}]",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "1586170d-188d-4ba4-b16a-06750ce1ba08"
+}
