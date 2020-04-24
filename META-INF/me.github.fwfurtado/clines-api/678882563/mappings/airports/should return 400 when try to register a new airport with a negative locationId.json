@@ -1,0 +1,26 @@
+{
+  "id" : "69b9b472-9bea-4063-b2df-59060b9ad695",
+  "request" : {
+    "url" : "airports",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['code'] == 'cgh')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['locationId'] == -2)]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "{\"errors\":[{\"message\":\"must be greater than 0\",\"field\":\"locationId\"}]}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "69b9b472-9bea-4063-b2df-59060b9ad695"
+}
